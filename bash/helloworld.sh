@@ -3,3 +3,4 @@
 #using echo command to give output
 echo 'Hello World!'
 echo "I am process # $$"
+exit
