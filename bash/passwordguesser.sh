@@ -20,7 +20,7 @@ then
 	# rewriting myString variable
 read -p "Enter String to guess password : " myString
 # check is userinput is same as required
-if [ $myString = $referenceString ];
+if [ ! -z "$myString" ] && [ $myString = $referenceString ];
 then
 	# guessed flag variable try for not to try more
         guessed=true
@@ -35,7 +35,7 @@ fi
 if [ $guessed != "true" ];
 then
 read -p "Enter String to guess password : " myString
-if [ $myString = $referenceString ];
+if [ ! -z "$myString" ] && [ $myString = $referenceString ];
 then
         guessed=true
         echo "Correct!"
@@ -47,7 +47,7 @@ fi
 if [ $guessed != "true" ];
 then
 read -p "Enter String to guess password : " myString
-if [ $myString = $referenceString ];
+if [ ! -z "$myString" ] && [ $myString = $referenceString ];
 then
         guessed=true
         echo "Correct!"
@@ -59,7 +59,7 @@ fi
 if [ $guessed != "true" ];
 then
 read -p "Enter String to guess password : " myString
-if [ $myString = $referenceString ];
+if [ ! -z "$myString" ] && [ $myString = $referenceString ];
 then
         guessed=true
         echo "Correct!"
@@ -71,7 +71,7 @@ fi
 if [ $guessed  != "true" ];
 then
 read -p "Enter String to guess password : " myString
-if [ $myString = $referenceString ];
+if [ ! -z "$myString" ] && [ $myString = $referenceString ];
 then
         guessed=true
         echo "Correct!"
