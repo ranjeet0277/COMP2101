@@ -6,7 +6,11 @@
 #       reset the count to the maximum and tell the user they are not allowed to interrupt
 #       the count. If the script receives a QUIT signal, tell the user they found the secret
 #       to getting out of the script and exit immediately.
+<<<<<<< HEAD
 #using trap function
+=======
+
+>>>>>>> 037bf8d69ffa8c24a8a242b070352ddabd432fd8
 trap reset 2
 trap secret 3
 # This function will reset the timer and restart counting
@@ -56,7 +60,10 @@ EOF
 
 # Produce the numbers for the countdown
 function doCountdown {
+<<<<<<< HEAD
 #using while loop here
+=======
+>>>>>>> 037bf8d69ffa8c24a8a242b070352ddabd432fd8
 while [ $sleepCount -gt 0 ]; do
     echo $((sleepCount * 100 / $numberOfSleeps))
     sleepCount=$((sleepCount - 1))
@@ -68,8 +75,12 @@ done
 
 # Process command line parameters
 while [ $# -gt 0 ]; do
+<<<<<<< HEAD
     #different cases in while loop
 		case $1 in
+=======
+    case $1 in
+>>>>>>> 037bf8d69ffa8c24a8a242b070352ddabd432fd8
         -w | --waittime )
             shift
             sleepTime="$1"
@@ -88,7 +99,11 @@ while [ $# -gt 0 ]; do
     esac
     shift
 done
+<<<<<<< HEAD
 #if conditions
+=======
+
+>>>>>>> 037bf8d69ffa8c24a8a242b070352ddabd432fd8
 if [ ! $numberOfSleeps -gt 0 ]; then
     error-exit "$numberOfSleeps is not a valid count of sleeps to wait for signals"
 fi
